@@ -1,0 +1,28 @@
+  <div class="text-center">
+    <a [routerLink]="['/content', product._id]">
+      <img src="{{product.pic_small}}" alt="" class="card-img-top">
+    </a>
+  </div>
+  <div class="card-block">
+    <h6 class="card-title">
+      {{product.name}}
+    </h6>
+    <!--<p class="card-text">{{product.description}}</p>-->
+    <h6 class="card-text">
+      Price:
+      <b>{{product.price}}</b><br>
+      Opt price:
+      <b>{{product.price_opt}}</b>
+    </h6>
+    <button type="button" class="btn btn-warning" (click)="toCart()">
+      <i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>
+      В корзину
+    </button>
+  </div>
+  <!--<div class="card-footer">-->
+    <!--<small class="text-muted">Last updated 3 mins ago</small>-->
+  <!--</div>-->
+
+
+
+

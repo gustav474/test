@@ -1,0 +1,11 @@
+.jumbotron {
+  /*background-image: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQmnIprc7D-1XdYiI9-Ck9M8ewN3zCOjMjmjKtW2eK88Iwz4rJS");*/
+  height: 460px;
+  background-color: #299fc5;
+  border-radius: 0px;
+}
+.slogan {
+  height: 350px;
+  width: auto;
+  background-color: #e2ffef;
+}

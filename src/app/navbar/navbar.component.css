@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #ffc6b7;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.navbar-brand {
+  color: white;
+}
+
+a {
+  color: white;
+}
+
+.navbar-nav {
+  justify-content: center;
+  /*margin-right: 15px;*/
+}
+
+.custom-menu {
+  flex-grow: 6;
+}
+
+.custom-menu li {
+  margin-right: 30px;
+  margin-left: 30px;
+}
+
+

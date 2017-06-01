@@ -1,0 +1,31 @@
+  <div class="menu">
+
+    <ul class="list-group">
+      <li *ngFor="let category of categories">
+        <a class="d-block" (click) = "showCategory(category, brand)">
+          {{category}}
+        </a>
+      </li>
+    </ul>
+
+    <!--<label for="price_range">Диапазон цен</label>-->
+    <!--<select name="" id="price_range" [(ngModel)]="price">-->
+      <!--<option selected>-&#45;&#45;</option>-->
+      <!--<option *ngFor="let price of price_range">-->
+        <!--{{price}}-->
+      <!--</option>-->
+    <!--</select><br>-->
+
+    <label for="brand">Брэнд</label>
+    <select name="" id="brand" [(ngModel)]="brand">
+      <option *ngFor="let brand of brands">
+        {{brand}}
+      </option>
+    </select>
+    <app-price-slider></app-price-slider>
+    <button (click)="showCategory(category, brand)">Типа поиск</button>
+    {{firstval}}
+    {{secondval}}
+
+  </div>
+

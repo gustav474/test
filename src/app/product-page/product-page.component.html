@@ -1,0 +1,51 @@
+<div class="row" *ngFor="let product of product">
+  <div class="col-lg-6">
+    <div class="row">
+
+      <!--Slider-->
+      <app-img-slider [product]="product"></app-img-slider>
+      <!--<div class="slider_option">-->
+        <!--<input type="checkbox" id="checkbox">-->
+        <!--<label for="checkbox">Autoplay Slider</label>-->
+      <!--</div>-->
+      <!--/Slider-->
+
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="row">
+      <b><h4>{{product.name}}</h4></b>
+    </div>
+    <div class="row">
+      <h6>{{product.price}}</h6>
+    </div>
+    <div class="row">
+      <button (click)="AddToCart(product)">Add to cart</button>
+    </div>
+    <div class="row">
+      {{product.description}}
+    </div>
+    <div class="row">
+      <p>
+        <a class="btn btn-primary" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          Детали
+        </a>
+      </p>
+      <div class="collapse" id="collapseExample">
+
+          <ul class="list-group">
+            <li class="list-group-item"><b>Производитель: </b>{{product.brand}}</li>
+            <li class="list-group-item"><b>Материал: </b>{{product.material}}</li>
+            <li class="list-group-item"><b>Размер/Цвет: </b>{{product.size_color}}</li>
+            <li class="list-group-item"><b>Батарейка: </b>{{product.battery}}</li>
+            <li class="list-group-item"><b>Упаковка: </b>{{product.package}}</li>
+            <li class="list-group-item"><b>На складе(шт): </b>{{product.instock}}</li>
+          </ul>
+        </div>
+
+    </div>
+  </div>
+</div>
+
+
+

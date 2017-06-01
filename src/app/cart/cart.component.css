@@ -1,0 +1,65 @@
+.amount {
+  width: 30px;
+  height: 30px;
+  background: #d8d0c8;
+  -moz-border-radius: 15px 15px 15px 15px;
+  -webkit-border-radius: 15px 15px 15px 15px;
+  border-radius: 15px 15px 15px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+  border-top: 0;
+}
+
+.header {
+  background-color: #2a2a2a;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  background-color: #2a2a2a;
+  margin-top: 10px;
+}
+
+.item {
+  margin-top: 10px;
+}
+
+.h-column {
+  color: white;
+  margin: 10px;
+}
+
+.column {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#number {
+  flex-basis: 5%;
+}
+
+#name {
+  flex-basis: 60%;
+}
+
+#amount {
+  flex-basis: 15%;
+}
+
+#price {
+  flex-basis: 10%;
+}
+
+#delete {
+  flex-basis: 10%;
+}

@@ -1,0 +1,142 @@
+<h2>Корзина</h2>
+
+<!--<div class="panel panel-default">-->
+
+  <!--<table class="table">-->
+
+    <!--&lt;!&ndash;Шаблон таблицы&ndash;&gt;-->
+    <!--<thead class="thead-inverse">-->
+    <!--<tr>-->
+      <!--<th>№</th>-->
+      <!--<th>Наименование</th>-->
+      <!--<th style="width: 200px">Колличество</th>-->
+      <!--<th>Цена</th>-->
+      <!--<th></th>-->
+    <!--</tr>-->
+    <!--</thead>-->
+    <!--&lt;!&ndash;Наполнение таблицы&ndash;&gt;-->
+    <!--<tbody *ngFor="let item of itemsInCart; let i = index">-->
+      <!--<tr>-->
+        <!--<td>{{i+1}}</td>-->
+        <!--<td>-->
+          <!--<a [routerLink]="['/content', item._id]">-->
+            <!--{{item.name}}-->
+          <!--</a>-->
+        <!--</td>-->
+
+        <!--&lt;!&ndash;<td  style="display: flex; flex-direction: row; justify-content: flex-start; align-items: flex-end;">&ndash;&gt;-->
+          <!--&lt;!&ndash;<a class="amount" (click)="DeleteAmount(i)">&ndash;&gt;-->
+          <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--<td style="vertical-align: middle">-->
+          <!--<div class="amount" (click)="DeleteAmount(i)">-->
+            <!--<a>-->
+              <!--<i class="fa fa-minus" aria-hidden="true"></i>-->
+            <!--</a>-->
+          <!--</div>-->
+          <!--<div class="ml-2 mr-2">-->
+            <!--{{item.amount}}-->
+          <!--</div>-->
+          <!--<div class="amount" (click)="AddAmount(i)">-->
+            <!--<a>-->
+              <!--<i class="fa fa-plus" aria-hidden="true"></i>-->
+            <!--</a>-->
+          <!--</div>-->
+
+          <!--&lt;!&ndash;<a class="" (click)="AddAmount(i)">&ndash;&gt;-->
+            <!--&lt;!&ndash;<i class="fa fa-plus" aria-hidden="true"></i>&ndash;&gt;-->
+          <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--</td>-->
+        <!--<td>{{item.price}}</td>-->
+        <!--<td>-->
+
+          <!--<button type="button" class="btn btn-danger" aria-label="Delete" (click)="Delete(i)">-->
+            <!--<i class="fa fa-trash-o" aria-hidden="true"></i>-->
+          <!--</button>-->
+
+          <!--&lt;!&ndash;<a class="btn btn-danger" aria-label="Delete" (click)="Delete(i)">&ndash;&gt;-->
+            <!--&lt;!&ndash;<i class="fa fa-trash-o" aria-hidden="true"></i>&ndash;&gt;-->
+          <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--</td>-->
+      <!--</tr>-->
+    <!--</tbody>-->
+    <!--&lt;!&ndash;Цена ИТОГО&ndash;&gt;-->
+    <!--<tr>-->
+      <!--<td></td>-->
+      <!--<td class="text-lg-right">Сумма к заказу:</td>-->
+      <!--<td><b>{{totalprice}}</b></td>-->
+      <!--<td></td>-->
+    <!--</tr>-->
+
+  <!--</table>-->
+
+  <!--<button>К оплате</button>-->
+<!--</div>-->
+
+<!--Новая корзина-->
+<div class="cart d-flex flex-column">
+  <div class="header d-flex flex-row">
+    <div class="h-column" id="number">
+      #
+    </div>
+    <div class="h-column" id="name">
+      Наименование
+    </div>
+    <div class="h-column" id="amount">
+      Колличество
+    </div>
+    <div class="h-column" id="price">
+      Цена
+    </div>
+    <div class="h-column" id="delete">
+      Для удаления
+    </div>
+  </div>
+  <div class="item d-flex flex-row" *ngFor="let item of itemsInCart; let i = index">
+    <div class="column" id="number">
+      {{i+1}}
+    </div>
+    <div class="column" id="name">
+      <a [routerLink]="['/content', item._id]">
+        {{item.name}}
+      </a>
+    </div>
+    <div class="column" id="amount">
+      <div class="amount" (click)="DeleteAmount(i)">
+        <a>
+          <i class="fa fa-minus" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div class="ml-2 mr-2">
+        {{item.amount}}
+      </div>
+      <div class="amount" (click)="AddAmount(i)">
+        <a>
+          <i class="fa fa-plus" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+    <div class="column" id="price">
+      {{item.price}}
+    </div>
+    <div class="column" id="delete">
+      <button type="button" class="btn btn-danger" aria-label="Delete" (click)="Delete(i)">
+        <i class="fa fa-trash-o" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="h-column" id="number">
+    </div>
+    <div class="h-column" id="name">
+    </div>
+    <div class="h-column" id="amount">
+    </div>
+    <div class="h-column" id="price">
+      <h3>{{totalprice}}</h3>
+    </div>
+    <div class="h-column" id="delete">
+    </div>
+  </div>
+</div>
+
+

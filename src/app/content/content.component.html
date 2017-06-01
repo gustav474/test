@@ -1,0 +1,40 @@
+
+    <div class="card-group" style=" justify-content: flex-start">
+      <!--<div class="row">-->
+        <!--<div class="col-lg-3 pr-0 pl-3 pb-3" >-->
+
+         <div class="card" style="flex-basis: 25%; border-left: 1px solid grey; border-radius: 0px"  *ngFor="let product of products">
+
+          <!--Отказлся от использования компонента <app-card> и тогда карточки стали одинаковыми по высоте в строке-->
+          <app-card [product]="product" (addToCart)="addToCart(product)"></app-card>
+
+           <!--<div class="text-center">-->
+             <!--<a [routerLink]="['/content', product._id]">-->
+               <!--<img src="{{product.pic_small}}" alt="" class="card-img-top">-->
+             <!--</a>-->
+           <!--</div>-->
+           <!--<div class="card-block">-->
+             <!--<h6 class="card-title">-->
+               <!--{{product.name}}-->
+             <!--</h6>-->
+             <!--&lt;!&ndash;<p class="card-text">{{product.description}}</p>&ndash;&gt;-->
+             <!--<h6 class="card-text">-->
+               <!--Price:-->
+               <!--<b>{{product.price}}</b><br>-->
+               <!--Opt price:-->
+               <!--<b>{{product.price_opt}}</b>-->
+             <!--</h6>-->
+             <!--<button (click)="toCart()">Add to cart</button>-->
+           <!--</div>-->
+           <!--<div class="card-footer">-->
+             <!--<small class="text-muted">Last updated 3 mins ago</small>-->
+           <!--</div>-->
+        </div>
+
+    </div>
+
+    <div *ngIf="error">
+      <h1>Совпадений нет! Поменяйте параметры поиска</h1>
+    </div>
+
+

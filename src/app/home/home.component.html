@@ -1,0 +1,86 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-2">
+      <!--<div class="menu">-->
+
+      <!--&lt;!&ndash;test&ndash;&gt;-->
+
+      <!--<label for="price_range">Диапазон цен</label>-->
+      <!--<select name="" id="price_range" [(ngModel)]="price">-->
+      <!--&lt;!&ndash;Не работает selected&ndash;&gt;-->
+      <!--<option selected>-&#45;&#45;</option>-->
+      <!--<option *ngFor="let price of price_range">-->
+      <!--{{price}}-->
+      <!--</option>-->
+      <!--</select><br>-->
+
+      <!--&lt;!&ndash;Вспомогательный маршрут&ndash;&gt;-->
+      <!--<a [routerLink]="[{ outlets: { 'test': ['bdsm'] } }]">BDSM</a>-->
+      <!--<a routerLink="/Вибраторы">Вибраторы</a>-->
+
+      <!--<ul class="menu-items" >-->
+      <!--<li *ngFor="let category of categories" (click)="getData(category, brand, price)">-->
+      <!--<a routerLink="">{{category}}</a>-->
+      <!--</li>-->
+      <!--</ul>-->
+
+      <!--&lt;!&ndash;Price slider&ndash;&gt;-->
+      <!--<p>-->
+      <!--<label for="amount">Price range:</label>-->
+      <!--<input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">-->
+      <!--</p>-->
+      <!--<div id="slider-range"></div>-->
+      <!--&lt;!&ndash;/Price slider&ndash;&gt;-->
+
+      <!--<label for="brand">Брэнд</label>-->
+      <!--<select name="" id="brand" [(ngModel)]="brand">-->
+      <!--<option *ngFor="let brand of brands">-->
+      <!--{{brand}}-->
+      <!--</option>-->
+      <!--</select>-->
+      <!--</div>-->
+
+
+
+      <!--<app-menu (test) = onTest($event)>/</app-menu>-->
+      <!--<router-outlet name="menu"></router-outlet>-->
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col-lg-4">
+      <!--<app-categories [searchParams]=searchParams></app-categories>-->
+      <router-outlet name="category"></router-outlet>
+    </div>
+  </div>
+</div>
+
+        <!--/test-->
+
+
+    <!--<div class="slogan">-->
+
+      <!--<div class="row">-->
+        <!--<div class="col-lg-1 test" *ngIf="products">-->
+          <!--<app-card [products]="products"></app-card>-->
+        <!--</div>-->
+      <!--</div>-->
+
+        <!--<div *ngIf="error">-->
+          <!--<h1>Совпадений нет!</h1>-->
+        <!--</div>-->
+
+    <!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

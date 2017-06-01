@@ -1,0 +1,34 @@
+li {
+  list-style-type: none;
+}
+
+.list-group li {
+  border-radius: 0;
+  border: 0;
+}
+
+.list-group li:hover {
+  background-color: #f7f5ea;
+  /*color: #ff1d2e;*/
+  /*font-weight: 600;*/
+}
+
+.list-group li a{
+  color: black;
+  text-decoration: none;
+  /*display: block;*/
+  padding: 6px;
+}
+
+.list-group li a:hover {
+  color: #d81f23;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu ul {
+  list-style: none;
+}
+
