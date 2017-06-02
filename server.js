@@ -40,5 +40,7 @@ const server = http.createServer(app);
 
 /**
  * Listen on provided port, on all network interfaces.
+  '0.0.0.0' for launch server from itself IP
  */
+
 server.listen(port, '0.0.0.0',() => console.log(`API running on localhost:${port}`));
