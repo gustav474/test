@@ -5,10 +5,12 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class DataService {
 
+  private serverIP: string = '62.109.2.55';
+
   private path: string = 'http://localhost:3000/api/users/3001';
   private category_path = 'http://localhost:3000/api/products/category/';
-  private search_path = 'http://localhost:3000/api/search';
-  private search_single_product_path = 'http://localhost:3000/api/singlesearch';
+  private search_path = 'http://' + this.serverIP + ':3000/api/search';
+  private search_single_product_path = 'http://' + this.serverIP + ':3000/api/singlesearch';
 
 
 
