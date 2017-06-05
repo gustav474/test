@@ -32,7 +32,7 @@ fs.readFile('file.csv', function (err, contents) {
     .replace(/(?:"Фотография 5")/, 'pic5\n')
 
     .replace(/\"/g, '\'')
-    .replace(/\;/g, '\,');
+    .replace(/;/g, ',');
   //  записывем изменения обратно в файл с выгрузкой
   fs.writeFile('file.csv', str);
 } );
