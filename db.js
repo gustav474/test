@@ -5,7 +5,7 @@
 var mongoose = require('mongoose');
 const serverIP = '62.109.2.55';
 
-mongoose.connect('mongodb://' + serverIP + '/test/');
+mongoose.connect('mongodb://' + this.serverIP + '/test/');
 var Schema = mongoose.Schema;
 
 // create a schema

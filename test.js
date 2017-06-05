@@ -29,7 +29,7 @@ fs.readFile('file.csv', function (err, contents) {
     .replace(/(?:"Фотография 2")/, 'pic2')
     .replace(/(?:"Фотография 3")/, 'pic3')
     .replace(/(?:"Фотография 4")/, 'pic4')
-    .replace(/(?:"Фотография 5")/, 'pic5')
+    .replace(/(?:"Фотография 5")/, 'pic5\n')
 
     .replace(/\"/g, '\'');
   //  записывем изменения обратно в файл с выгрузкой
